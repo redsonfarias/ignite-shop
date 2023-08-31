@@ -5,7 +5,7 @@ Ignite Shop é o quarto desafio da trilha de ReactJS do bootcamp Ignite da Rocke
 Aprimorar habilidades em conceitos como server-side rendering(SSR) e static-site generation(SSG) do Next, e a criação de interfaces responsivas utilizando StitchesJS.
 
 ### Aplicação
-[https://ignite-shop-rf.vercel.app/](https://ignite-shop-rf.vercel.app/)
+[https://ignite-shop-rf.vercel.app](https://ignite-shop-rf.vercel.app)
 
 ### Instalação/Execução
 Clone o projeto
