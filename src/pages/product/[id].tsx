@@ -60,13 +60,18 @@ export default function Product({ product }: Props) {
 
       <ProductContainer>
         <ImageContainer>
-          <Image src={product.imageUrl} width={520} height={480} alt="" />
+          <Image
+            src={product.imageUrl}
+            width={520}
+            height={480}
+            layout="responsive"
+            alt=""
+          />
         </ImageContainer>
 
         <ProductDetails>
           <h1>{product.name}</h1>
           <span>{product.price}</span>
-
           <p>{product.description}</p>
 
           <button

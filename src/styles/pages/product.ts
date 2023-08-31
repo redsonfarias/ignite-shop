@@ -1,16 +1,24 @@
+import Image from "next/image";
 import { styled } from "..";
 
 export const ProductContainer = styled('main', {
-  display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
-  alignItems: 'stretch',
-  gap: '4rem',
+  margin: '0 auto',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '2rem',
 
-  maxWidth: 1180,
-  margin: '0 auto'
+  '@lg': {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    alignItems: 'stretch',
+    gap: '4rem',
+  
+    maxWidth: 1180,
+  }
 })
 
 export const ImageContainer = styled('div', {
+  margin: '0 auto',
   width: '100%',
   maxWidth: 576,
   height: 576,
@@ -24,10 +32,17 @@ export const ImageContainer = styled('div', {
 
   img: {
     objectFit: 'cover',
+  },
+
+  '@lg': {
+    margin: 0
   }
 })
 
 export const ProductDetails = styled('div', {
+  margin: '0 auto',
+  maxWidth: 576,
+
   display: 'flex',
   flexDirection: 'column',
 
@@ -51,7 +66,7 @@ export const ProductDetails = styled('div', {
   },
 
   button: {
-    marginTop: 'auto',
+    marginTop: '3rem',
     backgroundColor: '$green500',
     color: '$white',
     borderRadius: 8,
@@ -65,6 +80,10 @@ export const ProductDetails = styled('div', {
 
     '&:not(:disabled):hover': {
       backgroundColor: '$green300',
+    },
+
+    '@lg': {
+      marginTop: 'auto',
     }
   },
 })

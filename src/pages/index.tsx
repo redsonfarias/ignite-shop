@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -29,12 +30,36 @@ interface Props {
 }
 
 export default function Home({ products }: Props) {
+  const [perView, setPerView] = useState(2)
+
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: {
-      perView: 2,
+      perView,
       spacing: 48,
     },
   })
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (!!sliderRef) {
+        if (window.innerWidth >= 2560) {
+          setPerView(3)
+        } else if (window.innerWidth >= 1200) {
+          setPerView(2)
+        } else {
+          setPerView(1)
+        }
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    handleResize()
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [sliderRef])
 
   function prevProduct() {
     instanceRef?.current?.prev()
@@ -73,7 +98,7 @@ export default function Home({ products }: Props) {
             </Product>
           </Link>
         ))}
-        <button>Comprar agora</button>
+
         <LeftIcon onClick={prevProduct} />
         <RightIcon onClick={nextProduct} />
       </HomeContainer>
