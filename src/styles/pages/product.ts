@@ -6,6 +6,7 @@ export const ProductContainer = styled('main', {
   display: 'flex',
   flexDirection: 'column',
   gap: '2rem',
+  maxWidth: 1180,
 
   '@lg': {
     display: 'grid',
@@ -13,15 +14,13 @@ export const ProductContainer = styled('main', {
     alignItems: 'stretch',
     gap: '4rem',
   
-    maxWidth: 1180,
   }
 })
 
 export const ImageContainer = styled('div', {
-  margin: '0 auto',
   width: '100%',
   maxWidth: 576,
-  height: 576,
+  height: 480,
   background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
   borderRadius: 8,
   padding: '0.25rem',
@@ -34,8 +33,8 @@ export const ImageContainer = styled('div', {
     objectFit: 'cover',
   },
 
-  '@lg': {
-    margin: 0
+  '@sm': {
+    height: 576,
   }
 })
 
@@ -47,15 +46,23 @@ export const ProductDetails = styled('div', {
   flexDirection: 'column',
 
   h1: {
-    fontSize: '$2xl',
+    fontSize: '$xl',
     color: '$gray300',
+
+    '@sm': {
+      fontSize: '$2xl'
+    }
   },
 
   span: {
     marginTop: '1rem',
     display: 'block',
-    fontSize: '$2xl',
+    fontSize: '$xl',
     color: '$green300',
+
+    '@sm': {
+      fontSize: '$2xl'
+    }
   },
 
   p: {
