@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { styled } from "..";
+import { styled } from ".."
 
 export const ProductContainer = styled('main', {
   margin: '0 auto',
