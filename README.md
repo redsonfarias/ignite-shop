@@ -1,4 +1,5 @@
-# Ignite Shop
+![image](https://github.com/redsonfarias/ignite-shop/assets/130811163/f647f5ac-c626-490b-8c55-e9e88a0a1377)
+
 Ignite Shop é o quarto desafio da trilha de ReactJS do bootcamp Ignite da Rocketseat, onde o propósito é desenvolver uma aplicação para gerenciar um ecommerce fictício.
 
 ### Objetivos
